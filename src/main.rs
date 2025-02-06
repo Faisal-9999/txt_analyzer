@@ -26,7 +26,7 @@ fn main() {
 
         let mut temp = String::new();
         for character in line.chars() {
-            if character == ' ' {
+            if character == ' ' || character == ',' || character == '.' {
                 *words.entry(temp).or_insert(0) += 1;
                 temp = String::new();
             }
